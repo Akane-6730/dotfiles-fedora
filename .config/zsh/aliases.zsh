@@ -1,3 +1,11 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
 # Emacs
 alias e="emacs -nw"
 alias ec="emacs"
