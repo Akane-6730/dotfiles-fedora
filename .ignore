@@ -1,0 +1,98 @@
+# Version Control
+.git/
+.svn/
+.hg/
+
+# Shell & History
+.zcompdump*
+.zsh_history
+.bash_history
+.viminfo
+.lesshst
+*.log
+
+# Editors & IDEs
+.idea/
+.vscode/
+.vscode-server/
+.antigravity/
+.antigravity-server/
+.history/
+*.sublime-workspace
+auto-save-list/
+.emacs.d/eln-cache/
+.emacs.d/auto-save-list/
+
+# Language Package Managers & Caches
+node_modules/
+bower_components/
+.npm/
+.bun/
+.yarn/
+.pnpm-store/
+.cargo/
+.rbenv/
+.opam/
+.ghcup/
+.stack/
+.nuget/
+.gemini/
+.claude/
+.cherrystudio/
+bun.lock
+package-lock.json
+yarn.lock
+
+# Build Artifacts
+target/
+build/
+dist/
+out/
+_build/
+deps/
+.Xil/
+.Xilinx/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+.venv/
+venv/
+env/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+
+# OCaml
+_opam/
+*.cmo
+*.cmi
+*.cma
+*.cmx
+*.cmxa
+*.o
+
+# TeX / LaTeX
+*.aux
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Apps & System
+.mozilla/
+.zotero/
+Zotero/
+.xwechat/
+.dbus/
+.pki/
+.var/
+.Trash/
+.local/share/Trash/
+.DS_Store
