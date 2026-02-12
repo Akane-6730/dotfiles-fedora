@@ -1,0 +1,98 @@
+format = """$python$nodejs$rust$golang$php$java$character$directory$git_branch$git_status"""
+
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+format = "$symbol  "
+
+[directory]
+truncation_length = 1
+truncate_to_repo = false
+style = "bold cyan"
+format = "[$path]($style) "
+
+[git_branch]
+format = "[git:\\(](bold blue)[$branch](bold red)[\\)](bold blue)"
+symbol = ""
+
+[git_status]
+format = '([ ✗](bold yellow)$all_status) '
+style = "bold yellow"
+conflicted = "\u200B"
+ahead = "\u200B"
+behind = "\u200B"
+diverged = "\u200B"
+untracked = "\u200B"
+stashed = ""
+modified = "\u200B"
+staged = "\u200B"
+renamed = "\u200B"
+deleted = "\u200B"
+
+# --- Languages (White, formatted as (env)) ---
+
+[python]
+# Only show virtualenv name, not version
+format = '[(\($virtualenv\)) ]($style)'
+style = "bold white"
+disabled = false
+
+[nodejs]
+format = '[(\($version\)) ]($style)'
+style = "bold white"
+disabled = false
+
+[rust]
+format = '[(\($version\)) ]($style)'
+style = "bold white"
+disabled = false
+
+[golang]
+format = '[(\($version\)) ]($style)'
+style = "bold white"
+disabled = false
+
+[java]
+format = '[(\($version\)) ]($style)'
+style = "bold white"
+disabled = false
+
+[php]
+format = '[(\($version\)) ]($style)'
+style = "bold white"
+disabled = false
+
+# Disable modules we don't need (keep it fast)
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[package]
+disabled = true
+
+[ruby]
+disabled = true
+
+[lua]
+disabled = true
+
+[haskell]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[cmd_duration]
+min_time = 3_000
+format = "[$duration]($style) "
+style = "bold yellow"
