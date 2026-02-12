@@ -1,0 +1,10 @@
+# Ignore OS junk
+.DS_Store
+.Trash/
+
+# Ignore editor temp files
+*.swp
+*~
+#*
+
+# Ignore stow junk (if any)

@@ -26,6 +26,7 @@ alias n="nvim"
 alias v="vim"
 
 # Git
+alias g='git'
 alias gi='git init'
 alias gs='git status -b'
 alias ga='git add .'
