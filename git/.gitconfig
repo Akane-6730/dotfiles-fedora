@@ -1,0 +1,17 @@
+[user]
+	name = Akane
+	email = 710105188@qq.com
+	signingkey = /home/akane/.ssh/id_rsa.pub
+[http]
+	postBuffer = 1048576000
+[core]
+	excludesfile = ~/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
