@@ -12,6 +12,9 @@ ZSH_CONFIG_DIR="$HOME/.config/zsh"
 source "$ZSH_CONFIG_DIR/env.zsh"
 source "$ZSH_CONFIG_DIR/tools.zsh"
 
+# Load secrets if exists
+[[ -f "$ZSH_CONFIG_DIR/secrets.zsh" ]] && source "$ZSH_CONFIG_DIR/secrets.zsh"
+
 # Zsh Core (History, Completion)
 source "$ZSH_CONFIG_DIR/history.zsh"
 source "$ZSH_CONFIG_DIR/completion.zsh"
