@@ -1,6 +1,15 @@
-format = """$python$nodejs$rust$golang$php$java$character$directory$git_branch$git_status"""
+format = """ $os$python$nodejs$rust$golang$php$java$character$directory$git_branch$git_status"""
 
 add_newline = false
+
+[os]
+disabled = false
+format = "[$symbol]($style) "
+
+[os.symbols]
+Macos = " "
+Fedora = " "
+Arch = " "
 
 [character]
 success_symbol = "[➜](bold green)"
