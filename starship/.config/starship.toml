@@ -1,9 +1,11 @@
-format = """ $os$python$nodejs$rust$golang$php$java$character$directory$git_branch$git_status"""
+format = """ $os$character$directory$git_branch$git_status"""
+right_format = """$python$nodejs$rust$golang$php$java"""
 
 add_newline = false
 
 [os]
 disabled = false
+style = "bold blue"
 format = "[$symbol]($style) "
 
 [os.symbols]
@@ -14,7 +16,7 @@ Arch = " "
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[➜](bold red)"
-format = "$symbol  "
+format = "$symbol "
 
 [directory]
 truncation_length = 1
@@ -40,66 +42,59 @@ staged = "\u200B"
 renamed = "\u200B"
 deleted = "\u200B"
 
-# --- Languages (White, formatted as (env)) ---
-
 [python]
-# Only show virtualenv name, not version
-format = '[(\($virtualenv\)) ]($style)'
-style = "bold white"
+symbol = " "
+style = "bold blue"
+format = "[$symbol $virtualenv]($style) "
 disabled = false
+
+[lua]
+format = '[$symbol($version )]($style)'
+symbol = ' '
 
 [nodejs]
-format = '[(\($version\)) ]($style)'
-style = "bold white"
-disabled = false
-
-[rust]
-format = '[(\($version\)) ]($style)'
-style = "bold white"
+symbol = " "
+style = "bold green"
+format = "[$symbol $version]($style) "
+version_format = "${raw}"
 disabled = false
 
 [golang]
-format = '[(\($version\)) ]($style)'
-style = "bold white"
+symbol = " "
+style = "bold cyan"
+format = "[$symbol $version]($style) "
+version_format = "${raw}"
 disabled = false
 
-[java]
-format = '[(\($version\)) ]($style)'
-style = "bold white"
+[haskell]
+style = 'blue'
+symbol = ' '
+
+[rust]
+symbol = " "
+style = "bold red"
+format = "[$symbol $version]($style) "
+version_format = "${raw}"
 disabled = false
 
 [php]
-format = '[(\($version\)) ]($style)'
-style = "bold white"
+symbol = " "
+style = "bold magenta"
+format = "[$symbol $version]($style) "
+version_format = "${raw}"
 disabled = false
 
-# Disable modules we don't need (keep it fast)
-[aws]
-disabled = true
-
-[gcloud]
-disabled = true
-
-[kubernetes]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[package]
-disabled = true
+[java]
+symbol = " "
+style = "bold blue"
+format = "[$symbol $version]($style) "
+version_format = "${raw}"
+disabled = false
 
 [ruby]
-disabled = true
-
-[lua]
-disabled = true
-
-[haskell]
-disabled = true
-
-[ocaml]
-disabled = true
+symbol = ' '
+style = 'blue'
+format = "[$symbol $version]($style) "
 
 [cmd_duration]
 min_time = 3_000
