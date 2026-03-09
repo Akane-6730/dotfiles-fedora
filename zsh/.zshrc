@@ -19,6 +19,10 @@ source "$ZSH_CONFIG_DIR/tools.zsh"
 source "$ZSH_CONFIG_DIR/history.zsh"
 source "$ZSH_CONFIG_DIR/completion.zsh"
 
+# Command line word behavior (e.g. Ctrl+W deletes one path segment)
+autoload -U select-word-style
+select-word-style bash
+
 # User Config (Aliases, Functions)
 source "$ZSH_CONFIG_DIR/aliases.zsh"
 source "$ZSH_CONFIG_DIR/functions.zsh"
