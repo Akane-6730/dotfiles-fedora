@@ -1,0 +1,34 @@
+# fonts
+font-family = Monaco Nerd Font
+font-family = LXGW WenKai Mono GB Screen
+font-family = Symbols Nerd Font Mono
+font-size = 13
+
+window-decoration = false
+window-show-tab-bar = auto
+copy-on-select = clipboard
+app-notifications = no-clipboard-copy
+
+keybind = ctrl+==unbind
+keybind = ctrl++=unbind
+keybind = ctrl+-=unbind
+keybind = ctrl+0=unbind
+keybind = ctrl+,=unbind
+keybind = ctrl+shift+==increase_font_size:1
+keybind = ctrl+shift++=increase_font_size:1
+keybind = ctrl+shift+-=decrease_font_size:1
+keybind = ctrl+shift+0=reset_font_size
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+enter=new_split:down
+
+resize-overlay = never
+
+theme = Tomorrow Night
+window-theme = ghostty
+window-titlebar-background = #1d1f21
+window-titlebar-foreground = #c5c8c6
+split-divider-color = #373b41
+gtk-wide-tabs = false
+gtk-toolbar-style = flat
+gtk-custom-css = tab.css

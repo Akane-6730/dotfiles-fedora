@@ -1,0 +1,135 @@
+/* Force AdwTabBar/chrome to match Tomorrow Night when system is light */
+:root {
+  --ghostty-bg: #1d1f21;
+  --ghostty-fg: #c5c8c6;
+  --headerbar-bg-color: #1d1f21;
+  --headerbar-fg-color: #c5c8c6;
+  --headerbar-backdrop-color: #1d1f21;
+  --headerbar-border-color: #1d1f21;
+  --headerbar-shade-color: #1d1f21;
+  --headerbar-darker-shade-color: #1d1f21;
+  --window-bg-color: #1d1f21;
+  --window-fg-color: #c5c8c6;
+  --view-bg-color: #1d1f21;
+  --view-fg-color: #c5c8c6;
+  --popover-bg-color: #282a2e;
+  --popover-fg-color: #c5c8c6;
+  --dialog-bg-color: #1d1f21;
+  --dialog-fg-color: #c5c8c6;
+  --sidebar-bg-color: #1d1f21;
+  --sidebar-fg-color: #c5c8c6;
+  --card-bg-color: #282a2e;
+  --card-fg-color: #c5c8c6;
+  --shade-color: #1d1f21;
+  --border-opacity: 0%;
+  /* dark-style destructive/error (close buttons) */
+  --destructive-bg-color: #c01c28;
+  --destructive-fg-color: #ffffff;
+  --destructive-color: #ff7b63;
+  --error-bg-color: #c01c28;
+  --error-fg-color: #ffffff;
+  --error-color: #ff7b63;
+}
+
+windowhandle {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+
+windowhandle:backdrop {
+  background-color: #1d1f21;
+}
+
+tabbar .box,
+toolbarview > .top-bar tabbar .box,
+toolbarview > .bottom-bar tabbar .box,
+tabbar.inline .box {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+  box-shadow: none;
+  border: none;
+}
+
+tabbar .box:backdrop,
+toolbarview > .top-bar tabbar .box:backdrop,
+toolbarview > .bottom-bar tabbar .box:backdrop {
+  background-color: #1d1f21;
+}
+
+toolbarview > .top-bar,
+toolbarview > .bottom-bar,
+toolbarview > .top-bar.raised,
+toolbarview > .bottom-bar.raised,
+toolbarview > .top-bar.raised.border,
+toolbarview > .bottom-bar.raised.border {
+  background-color: #1d1f21;
+  box-shadow: none;
+  border: none;
+}
+
+tabbar tab {
+  color: #c5c8c6;
+}
+
+tabbar tab:selected {
+  background-color: color-mix(in srgb, #c5c8c6 12%, transparent);
+}
+
+tabbar tab:hover {
+  background-color: color-mix(in srgb, #c5c8c6 8%, transparent);
+}
+
+tabbar tab:selected:hover {
+  background-color: color-mix(in srgb, #c5c8c6 16%, transparent);
+}
+
+/* window close / controls: match dark chrome instead of light Adwaita */
+windowcontrols {
+  color: #c5c8c6;
+}
+
+windowcontrols > button {
+  color: #c5c8c6;
+}
+
+windowcontrols > button > image {
+  background-color: color-mix(in srgb, #c5c8c6 12%, transparent);
+  color: #c5c8c6;
+}
+
+windowcontrols > button:hover > image {
+  background-color: color-mix(in srgb, #c5c8c6 18%, transparent);
+  color: #ffffff;
+}
+
+windowcontrols > button:active > image {
+  background-color: color-mix(in srgb, #c5c8c6 28%, transparent);
+  color: #ffffff;
+}
+
+windowcontrols > button.close:hover > image,
+windowcontrols > button:last-child:hover > image {
+  background-color: #c01c28;
+  color: #ffffff;
+}
+
+windowcontrols > button.close:active > image,
+windowcontrols > button:last-child:active > image {
+  background-color: #a51d2d;
+  color: #ffffff;
+}
+
+/* tab close buttons */
+tabbar tab button.image-button {
+  color: #c5c8c6;
+}
+
+tabbar tab button.image-button:hover {
+  color: #ffffff;
+  background-color: color-mix(in srgb, #c5c8c6 15%, transparent);
+}
+
+tabbar tab button.image-button:active {
+  background-color: #c01c28;
+  color: #ffffff;
+}
