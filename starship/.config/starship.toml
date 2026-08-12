@@ -1,102 +1,46 @@
-format = """ $os$character$directory$git_branch$git_status"""
-right_format = """$python$nodejs$rust$golang$php$java"""
+format = """ $os$character$directory$git_branch"""
+right_format = """$python$nodejs$java$golang"""
 
 add_newline = false
 
 [os]
 disabled = false
-style = "bold blue"
+style = "blue"
 format = "[$symbol]($style) "
 
 [os.symbols]
-Macos = " "
 Fedora = " "
 Arch = " "
+Ubuntu = " "
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[➜](bold red)"
+success_symbol = "[➜](green)"
+error_symbol = "[➜](red)"
 format = "$symbol "
 
 [directory]
 truncation_length = 1
+fish_style_pwd_dir_length = 1
 truncate_to_repo = false
-style = "bold cyan"
+style = "cyan"
 format = "[$path]($style) "
 
 [git_branch]
-format = "[git:\\(](bold blue)[$branch](bold red)[\\)](bold blue)"
-symbol = ""
-
-[git_status]
-format = '([ ✗](bold yellow)$all_status) '
-style = "bold yellow"
-conflicted = "\u200B"
-ahead = "\u200B"
-behind = "\u200B"
-diverged = "\u200B"
-untracked = "\u200B"
-stashed = ""
-modified = "\u200B"
-staged = "\u200B"
-renamed = "\u200B"
-deleted = "\u200B"
+format = "[git:\\(](blue)[$branch](red)[\\)](blue) "
 
 [python]
 symbol = " "
-style = "bold blue"
-format = "[$symbol $virtualenv]($style) "
-disabled = false
-
-[lua]
-format = '[$symbol($version )]($style)'
-symbol = ' '
+style = "blue"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [nodejs]
-symbol = " "
-style = "bold green"
-format = "[$symbol $version]($style) "
-version_format = "${raw}"
-disabled = false
-
-[golang]
-symbol = " "
-style = "bold cyan"
-format = "[$symbol $version]($style) "
-version_format = "${raw}"
-disabled = false
-
-[haskell]
-style = 'blue'
-symbol = ' '
-
-[rust]
-symbol = " "
-style = "bold red"
-format = "[$symbol $version]($style) "
-version_format = "${raw}"
-disabled = false
-
-[php]
-symbol = " "
-style = "bold magenta"
-format = "[$symbol $version]($style) "
-version_format = "${raw}"
-disabled = false
+symbol = "󰎙 "
 
 [java]
 symbol = " "
-style = "bold blue"
-format = "[$symbol $version]($style) "
-version_format = "${raw}"
-disabled = false
+format = "[$symbol$version]($style) "
+version_format = "$raw"
 
-[ruby]
-symbol = ' '
-style = 'blue'
-format = "[$symbol $version]($style) "
-
-[cmd_duration]
-min_time = 3_000
-format = "[$duration]($style) "
-style = "bold yellow"
+[golang]
+symbol = " "
+format = "[$symbol$version]($style)"
