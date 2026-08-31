@@ -1,0 +1,27 @@
+patch:
+  # ---------- 关闭候选后拼音注释 ----------
+  # 开关组 @9: [comment_off, tone_hint, toneless_hint]
+  "switches/@9/reset": 0
+  # 不向候选暴露词典编码；否则 super_comment 即使「注释关」仍可能带出拼音
+  translator/spelling_hints: 0
+  translator/always_show_comments: false
+  user_dict_set/spelling_hints: 0
+  add_user_dict/spelling_hints: 0
+
+  # ---------- 恢复 1–6 数字选词 ----------
+  # 方案默认 alphabet 含 1234567890：数字会进编码（声调）而不是选词
+  # 保留 7890 作声调筛选；去掉 123456，交给 selector 数字上屏
+  # 末尾 › ` ; / \ 与上游保持一致
+  speller/alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA7890`;/\\›"
+
+  key_binder/bindings/+:
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: paging, accept: equal, send: Page_Down }
+    - {accept: "Control+n", send: Down, when: composing}
+    - {accept: "Control+p", send: Up, when: composing}
+    - {accept: "Control+f", send: Right, when: composing}
+    - {accept: "Control+b", send: Left, when: composing}
+    - {accept: "Control+d", send: Delete, when: composing}
+    - {accept: "Control+h", send: BackSpace, when: composing}
